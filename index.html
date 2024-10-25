@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>^^</title>
+</head>
+<body>
+  
+  
+    <div id="customControls">
+      
+        <button id="PlayPauseBtn">Play</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" class="volume-slider">
+        <audio id="cornbeef" >
+        <source src="music.mp3" type="audio/mpeg"></source>
+    </audio>
+    </div>
+    
+    <div id="rectangle">
+      <div class="heart"></div>
+
+<style>
+  .heart {
+    position: sticky;
+    margin-left: 115px;
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6); /* Red shadow */
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg); /* Rotate to make the square shape look like a heart */
+    animation: jitter 0.1s infinite;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%; /* Make them circles */
+  }
+
+  .heart::before {
+    top: -30px; /* Move the first circle up */
+    left: 0;
+  }
+
+  .heart::after {
+    left: 30px; /* Move the second circle to the right */
+    top: 0;
+  }
+  
+  @keyframes jitter {
+    0% { transform: rotate(-45deg) translate(0, 0); }
+    25% { transform: rotate(-45deg) translate(2px, -2px); }
+    50% { transform: rotate(-45deg) translate(-2px, 2px); }
+    75% { transform: rotate(-45deg) translate(2px, 2px); }
+    100% { transform: rotate(-45deg) translate(0, 0); }
+  }
+  
+</style>
+
+      
+      <h2 class="burat">HELLOO LOVELOVEE!</h2>
+      <p class="lambo"> i just want to say  that im so grateful and thankful to have you thats why im making/writing this letter for you. thank you so much for coming-in to my life, my life before you came was not good it's all just dark and i dont have a reason to live, but when you came?, you made my life feel lighter, you made me stay motivated and focus on my goals. and thank you for being there at my lowest and highest. thank you for loving me for who am i and for loving me unconditionally. and also I really love your personality, your behavior, your kakulitan(sometimes), your katigasan ng ulo, your pagsesermon sakin when im playing too much basketball. i love your eyes, your kissable lips🤭, your cheeks, I LOVEEEE OF THEMMMM SO MUCHHHH. despite all of that you also made my problems go away when im talking to you, thank you for making my life feel like a feather
+And also im not good at writing letters but i know how to make an website🤪.</p>
+    
+  </div>
+</body>
+</html>
+
+<link rel="stylesheet" href="style.css">
+<script>
+  alert("I HOPE YOU'LL LIKE IT BABI!^^")
+  alert("DONT FORGET TO CLICK PLAY BEFORE YOU READ IT HAA^^")
+  
+  const audio = document.getElementById("cornbeef");
+const PlayPauseBtn = document.getElementById("PlayPauseBtn");
+
+PlayPauseBtn.addEventListener("click", function () {
+    if (audio.paused) {
+        audio.play();
+        PlayPauseBtn.textContent = "Pause"; // Fixed semicolon issue
+    } else {
+        audio.pause();
+        PlayPauseBtn.textContent = "Play"; // Fixed semicolon issue
+    }
+});
+
+const volumeControl = document.getElementById("volumeControl");
+volumeControl.addEventListener("input", function () {
+    audio.volume = volumeControl.value;
+});
+  
+  
+</script>

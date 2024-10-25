@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Lebron.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+#envelope {
+    margin: 20px;
+}
+
+#cornbeef {
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid #002dff;
+    border-radius: 30px;
+    background-color: #ffcaaa;
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+#customControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#PlayPauseBtn {
+    margin-left: 20px;
+    padding: 10px;
+    width: 40px;
+    height: 35px;
+    background-color: #ff92a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#PlayPauseBtn:hover {
+    background-color: #ff6390;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 10px;
+    border-radius: 5px;
+    background: #ff92a1;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#rectangle {
+    overflow: auto;
+    background-color: LightPink;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    max-height: 70vh;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px pink, 0 0 25px pink, 0 0 5px pink;
+    transition: height 0.5s ease;
+}
+
+p {
+    padding: 3px;
+    margin: 3px;
+    font-size: 1em;
+}
+
+#burat {
+    position: sticky;
+    top: 5px;
+    height: auto;
+    font-size: 2em;
+    font-family: Sans-Serif;
+    text-align: center;
+}
+
+.lambo {
+    opacity: 0;
+    animation: fadeIn 13s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.burat {
+    opacity: 0;
+    animation: fadeIn 13s ease-in forwards;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    #envelope {
+        margin: 10px;
+    }
+    
+    #PlayPauseBtn {
+        width: 35px;
+        height: 30px;
+    }
+
+    .volume-slider {
+        width: 80px;
+    }
+
+    #burat {
+        font-size: 1.5em;
+    }
+}
